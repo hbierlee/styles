@@ -59,6 +59,7 @@
       <term name="chapter-number" form="short">ch.</term>
       <term name="presented at">presented at the</term>
       <term name="available at">available</term>
+      <!-- <term name="phdthesis">PhD Thesis</term> -->
     </terms>
   </locale>
   <!-- Macros -->
@@ -163,6 +164,7 @@
         <text variable="title" quotes="true"/>
       </else>
     </choose>
+    <text variable="note" prefix=" "/>
   </macro>
   <macro name="publisher">
     <choose>
@@ -405,7 +407,7 @@
         <else-if type="thesis">
           <group delimiter=", " suffix=".">
             <text macro="title"/>
-            <text variable="genre"/>
+            <text macro="genre"/>
             <text macro="publisher"/>
             <text macro="issued"/>
           </group>
@@ -486,6 +488,7 @@
             <text macro="title"/>
             <text variable="container-title" font-style="italic"/>
             <text macro="locators"/>
+            <text macro="genre"/>
             <text macro="publisher"/>
             <text macro="page"/>
             <text macro="issued"/>
